@@ -1,0 +1,19 @@
+from random import randint
+
+luck = randint(1,20)
+answer = 30
+i = 0
+
+while answer != luck:
+    i += 1
+    answer = int(input("Give me a number from 1 - 20: "))
+    if answer > luck:
+        print("The number you are looking for is less than the specified number")
+    elif answer < luck:
+        print("The number you are looking for is greater than the specified number")
+    elif answer == luck and i == 1:
+        print("Great job, you guessed the number the first time! ")
+    elif answer == luck and i == 2:
+        print("Still good job, you guessed the number the second time!")
+
+print(f"Congrats! You guessed the number the {i} time!")
